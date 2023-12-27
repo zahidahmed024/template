@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "./Button";
+import discord from "@/assets/icons/discord.png";
 
 export default function Footer() {
   return (
@@ -6,17 +8,19 @@ export default function Footer() {
       <div className="border-b-[color:var(--Gray-600,#475467)] flex justify-between gap-5 mt-3.5 mx-8 pb-12 border-b border-solid items-start max-md:max-w-full max-md:flex-wrap max-md:mr-2.5">
         <div className="text-white text-5xl font-semibold leading-[65px] tracking-wider grow shrink basis-auto max-md:max-w-full max-md:text-4xl max-md:leading-[60px]">
           Join the Global Community for the Traders ✌️
-        </div>{" "}
-        <div className="justify-center items-stretch bg-indigo-500 flex gap-2.5 mt-9 p-4 rounded-xl">
+        </div>
+
+        <Button text="Join our Discord" rightIcon={discord} />
+        {/* <div className="justify-center items-stretch bg-indigo-500 flex gap-2.5 mt-9 p-4 rounded-xl">
           <div className="text-white text-right text-lg font-bold leading-6 grow whitespace-nowrap">
             Join our Discord
-          </div>{" "}
+          </div>
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/da63c59e5a1b1bf43e6bf8d3d4edc6dc8aba60a355fd25bce38dff093949329c?apiKey=877f25baca7641bea0898fac94c96e97&"
             className="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full"
           />
-        </div>
+        </div> */}
       </div>{" "}
       <div className="mt-16 mx-8 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">

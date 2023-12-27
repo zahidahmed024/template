@@ -4,6 +4,8 @@ import ic_commission from "../assets/icons/commission.png";
 import ic_profit from "../assets/icons/profit.png";
 import ic_performance from "../assets/icons/perform.png";
 import ic_timer from "../assets/icons/timer.png";
+import ic_star from "../assets/icons/star.png";
+import users from "../assets/images/users.png";
 import Image from "next/image";
 
 export default function InfoSection1() {
@@ -19,23 +21,22 @@ export default function InfoSection1() {
               <div className="text-gray-800 text-opacity-80 text-xl leading-8 mt-5 max-md:max-w-full">
                 FundedNext offers no time limits in its funding challenges.
               </div>
-              <div className="items-stretch flex justify-between gap-3 mt-9 max-md:max-w-full max-md:flex-wrap">
-                <div className="flex grow basis-[0%] flex-col justify-center pr-16 items-start max-md:pr-5">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/1f74cde7-db48-4658-982d-641dce676085?apiKey=877f25baca7641bea0898fac94c96e97&"
-                    className="aspect-[3.02] object-contain object-center w-[166px] items-start shadow-2xl overflow-hidden max-w-full"
-                  />
-                </div>
-                <div className="items-stretch flex grow basis-[0%] flex-col pb-1.5">
+              <div className="flex flex-row items-center gap-3 justify-start mt-9 max-md:max-w-full max-md:flex-wrap">
+                <Image
+                  src={users}
+                  className="items-start w-[166px] overflow-hidden rounded-full"
+                />
+                <div className="flex grow basis-[0%] flex-col pb-1.5">
                   <div className="text-gray-900 text-lg font-semibold leading-7">
                     Our Happy Traders
                   </div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/cddade30454c87296c4660dfdbc884a06849f3959548db9839e7f2712ca2291f?apiKey=877f25baca7641bea0898fac94c96e97&"
-                    className="aspect-square object-contain object-center w-[18px] justify-center items-center overflow-hidden max-w-full self-start"
-                  />
+                  <div className="flex flex-row">
+                    <Image
+                      src={ic_star}
+                      className="items-start w-6 overflow-hidden"
+                    />
+                    <p>(1.5k Reviews)</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,16 +92,14 @@ const BoxItem = ({ icon = "", text1 = "", text2 = "", className = "" }) => {
         className="aspect-square object-contain object-center w-[54px] overflow-hidden max-w-full"
       />
       <div
-        className={`self-stretch ${
-          className ? "text-white" : "text-gray-900"
-        } text-xl font-semibold leading-7 tracking-tight mt-8`}
+        className={`self-stretch ${className ? "text-white" : "text-gray-900"
+          } text-xl font-semibold leading-7 tracking-tight mt-8`}
       >
         {text1}
       </div>{" "}
       <div
-        className={`self-stretch ${
-          className ? "text-white" : "text-gray-900"
-        }  text-opacity-80 text-base leading-7 mt-3`}
+        className={`self-stretch ${className ? "text-white" : "text-gray-900"
+          }  text-opacity-80 text-base leading-7 mt-3`}
       >
         {text2}
       </div>

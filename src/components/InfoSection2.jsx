@@ -1,5 +1,6 @@
 import React from "react";
-
+import img_graph from "../assets/images/graphs.png";
+import Image from "next/image";
 export default function InfoSection2() {
   return (
     <>
@@ -51,11 +52,14 @@ export default function InfoSection2() {
             </div>
           </div>{" "}
           <div className="flex flex-col items-stretch w-[52%] ml-5 max-md:w-full max-md:ml-0">
-            <img
+            <Image
+              src={img_graph}
+            />
+            {/* <img
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/58fbc69bbfb9e1555d1e3d837d92b8852e0750b7ed1e3f1644d2e73fdfb0042c?apiKey=877f25baca7641bea0898fac94c96e97&"
               className="aspect-[1.27] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-10"
-            />
+            /> */}
           </div>
         </div>
       </div>{" "}

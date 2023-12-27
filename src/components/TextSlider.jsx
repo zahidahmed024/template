@@ -3,6 +3,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
+// live stats
 export default function TextSlider() {
   return (
     <div className="items-stretch bg-indigo-500 self-stretch flex w-full flex-col justify-center py-px rounded max-md:max-w-full">
