@@ -1,4 +1,10 @@
+"use client";
 import React from "react";
+import ic_commission from "../assets/icons/commission.png";
+import ic_profit from "../assets/icons/profit.png";
+import ic_performance from "../assets/icons/perform.png";
+import ic_timer from "../assets/icons/timer.png";
+import Image from "next/image";
 
 export default function InfoSection1() {
   return (
@@ -34,68 +40,34 @@ export default function InfoSection1() {
               </div>
             </div>
           </div>
+          {/* box section  */}
           <div className="flex flex-col items-stretch w-[26%] ml-5 max-md:w-full max-md:ml-0">
             <div className="flex flex-col items-stretch max-md:mt-5">
-              <div className="bg-[linear-gradient(91deg,#3F68FF_0%,#CD63FF_100%)] flex flex-col px-5 py-8 rounded-2xl items-start max-md:px-5">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/76dc6295d44b3dfafea751ccab23f22d8d5bde78a78fdfd15925f90f47137057?apiKey=877f25baca7641bea0898fac94c96e97&"
-                  className="aspect-square object-contain object-center w-[54px] overflow-hidden max-w-full"
-                />
-                <div className="self-stretch text-white text-xl font-semibold leading-7 tracking-tight mt-8">
-                  15% Profit Sharing from Challenge Phase
-                </div>
-                <div className="self-stretch text-white text-base leading-7 mt-3">
-                  FundedNext is the only prop firm to offer a 15% profit sharing
-                  from the profit you make
-                </div>
-              </div>
-              <div className="bg-white flex flex-col mt-5 px-5 py-8 rounded-2xl items-start max-md:px-5">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/797810a59951e753b584cca3879fab4a9397501a35eb6946d15856e39c309830?apiKey=877f25baca7641bea0898fac94c96e97&"
-                  className="aspect-square object-contain object-center w-[54px] overflow-hidden max-w-full"
-                />
-                <div className="self-stretch text-gray-900 text-xl font-semibold leading-7 tracking-tight mt-8">
-                  Competitive Low Commission Rates
-                </div>
-                <div className="self-stretch text-gray-800 text-opacity-80 text-base leading-7 mt-3">
-                  FundedNext offers raw spread with Swap Free: World's best prop
-                  trading conditions.
-                </div>
-              </div>
+              <BoxItem
+                icon={ic_profit}
+                className="bg-[linear-gradient(91deg,#3F68FF_0%,#CD63FF_100%)]"
+                text1="15% Profit Sharing from Challenge Phase"
+                text2="FundedNext is the only prop firm to offer a 15% profit sharing from the profit you make"
+              />
+              <BoxItem
+                icon={ic_commission}
+                text1="15% Profit Sharing from Challenge Phase"
+                text2="FundedNext is the only prop firm to offer a 15% profit sharing from the profit you make"
+              />
             </div>
           </div>{" "}
           <div className="flex flex-col items-stretch w-[26%] ml-5 max-md:w-full max-md:ml-0">
             <div className="flex grow flex-col items-stretch mt-10">
-              <div className="bg-white flex flex-col px-5 py-8 rounded-2xl items-start max-md:pr-5">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/6224e3b818ae6ea4922afeaf8b1a1ec763d7adb487770e9bf26580b014a7176d?apiKey=877f25baca7641bea0898fac94c96e97&"
-                  className="aspect-square object-contain object-center w-[54px] overflow-hidden max-w-full"
-                />{" "}
-                <div className="self-stretch text-gray-900 text-xl font-semibold leading-7 tracking-tight mt-8">
-                  Balance Drawdown Performance Overview
-                </div>{" "}
-                <div className="self-stretch text-gray-800 text-opacity-80 text-base leading-7 mt-3">
-                  Daily drawdown uses balance, not equity, for utmost prop firm
-                  reliability.
-                </div>
-              </div>{" "}
-              <div className="bg-white flex flex-col mt-5 px-5 py-8 rounded-2xl items-start max-md:pr-5">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8594939bf2d867b902fc79565a5547b45453c6289aadc37f33cf925a903ad9d?apiKey=877f25baca7641bea0898fac94c96e97&"
-                  className="aspect-square object-contain object-center w-[54px] overflow-hidden max-w-full"
-                />{" "}
-                <div className="self-stretch text-gray-900 text-xl font-semibold leading-7 tracking-tight mt-8">
-                  No Time Limit on Challenge Phase
-                </div>{" "}
-                <div className="self-stretch text-gray-800 text-opacity-80 text-base leading-7 mt-3">
-                  Daily drawdown uses balance, not equity, for utmost prop firm
-                  reliability.
-                </div>
-              </div>
+              <BoxItem
+                icon={ic_performance}
+                text1="15% Profit Sharing from Challenge Phase"
+                text2="FundedNext is the only prop firm to offer a 15% profit sharing from the profit you make"
+              />
+              <BoxItem
+                icon={ic_timer}
+                text1="15% Profit Sharing from Challenge Phase"
+                text2="FundedNext is the only prop firm to offer a 15% profit sharing from the profit you make"
+              />
             </div>
           </div>
         </div>
@@ -108,3 +80,30 @@ export default function InfoSection1() {
     </div>
   );
 }
+
+const BoxItem = ({ icon = "", text1 = "", text2 = "", className = "" }) => {
+  return (
+    <div
+      className={`bg-white ${className} flex flex-col mt-5 px-5 py-8 rounded-2xl items-start max-md:pr-5`}
+    >
+      <Image
+        src={icon}
+        className="aspect-square object-contain object-center w-[54px] overflow-hidden max-w-full"
+      />
+      <div
+        className={`self-stretch ${
+          className ? "text-white" : "text-gray-900"
+        } text-xl font-semibold leading-7 tracking-tight mt-8`}
+      >
+        {text1}
+      </div>{" "}
+      <div
+        className={`self-stretch ${
+          className ? "text-white" : "text-gray-900"
+        }  text-opacity-80 text-base leading-7 mt-3`}
+      >
+        {text2}
+      </div>
+    </div>
+  );
+};

@@ -12,9 +12,11 @@ export default function Navbar() {
         <MenuItem text="More" dropDownMenu={[{ text: "option1" }]} />
       </div>
       <div className="self-stretch flex items-center justify-between gap-5">
+        <MenuItem text="Login" />
+        {/* 
         <div className="text-white text-base font-medium leading-6 my-auto">
           Login
-        </div>
+        </div> */}
         <Button text="Join Our Discord" />
       </div>
     </nav>
@@ -34,19 +36,19 @@ const MenuItem = ({ text = "", dropDownMenu = [] }) => {
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/23af5743255ea7151565bec537b10b9d12dbafcad318ce23683c858ffffa09f6?apiKey=877f25baca7641bea0898fac94c96e97&"
             className="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full ml-2"
           />
-          <div className="invisible group-hover:visible absolute right-0 top-full mt-2 space-y-2 bg-white border rounded-md shadow-md">
+          <ul className="invisible group-hover:visible absolute right-0 top-full mt-2 space-y-2 bg-white border rounded-md shadow-md">
             {dropDownMenu?.map((item) => () => {
-              <div className="px-4 py-2 flex items-center">
+              <li className="px-4 py-2 flex items-center">
                 {item?.text}
-                <img
+                {/* <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/23af5743255ea7151565bec537b10b9d12dbafcad318ce23683c858ffffa09f6?apiKey=877f25baca7641bea0898fac94c96e97&"
                   className="ml-2 h-4 w-4"
                   alt="down arrow"
-                />
-              </div>;
+                /> */}
+              </li>;
             })}
-          </div>
+          </ul>
         </>
       )}
     </div>
