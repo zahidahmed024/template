@@ -1,0 +1,8 @@
+Dear Candidate,
+Here's the Figma project link, https://www.figma.com/file/cheJVLe616lXM6aGPgT2K3/TBL-sample-design. It's a simple homepage with a header and a footer. But, I would like to see the following implementation in your coding challenge,
+1. Use Next.js 13, Tailwind, Storybook and TypeScript
+2. Decorate your components with Storybook
+3. Write unit tests for your components
+4. Use Domain Driven Design (DDD) to structure your code
+5. And make it responsive using your own creativity
+Thank you!
